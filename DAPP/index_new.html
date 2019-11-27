@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>example</title>
+<link rel="stylesheet" href="css/style_new.css" />
+</head>
+<body>
+<header class="">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"><img src="images/UC-Logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse navbar-collapse-right  " id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Invest<span class="sr-only">(current)</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Community Token</a>
+                            <a class="dropdown-item" href="#">Multi Wallet</a>
+                            <a class="dropdown-item" href="#">Tokensale Platform</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Raise
+                        </a>
+                        <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Tokensale Launchpad</a>
+                            <a class="dropdown-item" href="#">Tokenization Framework</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Tools
+                        </a>
+                        <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Exchange</a>
+                            <a class="dropdown-item" href="#">Token Tracker</a>
+                            <a class="dropdown-item" href="#">Tokensale Tracker</a>
+                            <a class="dropdown-item" href="#">News Feed</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                         About Us
+                        </a>
+                        <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Team</a>
+                            <a class="dropdown-item" href="#">Roadmap</a>
+                            <a class="dropdown-item" href="#">Events</a>
+                            <a class="dropdown-item" href="#">Partners</a>
+                            <a class="dropdown-item" href="#">Jobs</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Blog</a>
+                    </li>
+                    <li class="nav-item nav-btn">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Login</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="images/Flag_Australia.png" alt="">
+                        </a>
+                        <div class="dropdown-menu dropdown-content" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#"><img src="images/Flag_Australia.png" alt=""></a>
+                            <a class="dropdown-item" href="#"><img src="images/Flag_Another.png" alt=""></a>
+                        </div>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+         </div>
+</header>
+<div class="form-area">
+    <div class="container">
+        <div class="row bg-title">
+            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+                <h4 class="page-title">Overview</h4>
+            </div>
+            <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+
+                <ol class="breadcrumb">
+
+                    <li class="active">Overview</li>
+                </ol>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- .row -->
+        <div class="row">
+            <div id="secure_area" class="col-sm-12" style="display: block;">
+                <div class="white-box">
+                    <h3 class="box-title m-b-0">Employee Option Grants Status</h3>
+                    <div class="row">
+                        <div class="col-md-3 col-xs-6 b-r"> <strong>Total Pool Option</strong> <br>
+                            <p class="text-muted" id="total_pool_option"></p>
+                        </div>
+                        <div class="col-md-3 col-xs-6 b-r"> <strong>Employees in ESOP</strong> <br>
+                            <p class="text-muted" id="emp_in_esop"></p>
+                        </div>
+                        <div class="col-md-3 col-xs-6 b-r"> <strong>Remaining Pool Options</strong> <br>
+                            <p class="text-muted" id="remain_pool_options"></p>
+                        </div>
+                        <div class="col-md-3 col-xs-6"> <strong>Extra Option Issued</strong> <br>
+                            <p class="text-muted" id="extra_option_issued"></p>
+                        </div>
+
+                    </div>
+                    <br>
+                    <hr class="m-t-0">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-6 b-r"> <strong>ESOP state</strong> <br>
+                            <p class="text-muted" id="esop_state">Open</p>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="white-box">
+                    <h3 class="box-title m-b-0">Contract Addresses</h3>
+                    <div class="row">
+                        <div class="col-md-6 col-xs-12 b-r"> <strong>Root of Trust</strong> <br>
+                            <p class="text-muted" id="root_of_trust">0xE85b98C4935779CA772d2f2831EaCa76bA548018</p>
+                        </div>
+                        <div class="col-md-6 col-xs-12 b-r"> <strong>ESOP Contract</strong> <br>
+                            <p class="text-muted" id="esop_contract">0xA6cc9321a8cbffd332Af48323fB629817bFd6cD8</p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="white-box">
+                    <h3 class="box-title m-b-0">ESOP terms and conditions</h3>
+                    <div class="row">
+                        <div class="col-md-3 col-xs-6 b-r"> <strong>Total Pool Options</strong> <br>
+                            <p class="text-muted" id="total_pool_option_tc"></p>
+                        </div>
+                        <div class="col-md-6 col-xs-6 b-r"> <strong>New Employee Pool</strong> <br>
+                            <p class="text-muted" id="new_employee_pool"></p>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="white-box">
+                    <h3 class="box-title m-b-0">Employee List</h3>
+                    <div class="row">
+                        <div class="col-md-12 table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                <tr><th>Public Key</th>
+                                <th>Issue Date</th>
+                                <th>Issued Options</th>
+                                <th>Vested Options</th>
+                                <th>State</th>
+                                </tr></thead>
+                                <tbody id="emp_table_body">
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="white-box">
+                    <h3 class="box-title m-b-0">Employee Details</h3>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="col-md-12">Employee Address</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" name="employee_address" id="employee_address">
+                                </div>
+                            </div>
+                            <button type="button" onclick="get_emp_details()" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Issue Date</strong> <br>
+                                    <p class="text-muted" id="emp_issue_date">NA</p>
+                                </div>
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Pool Options</strong> <br>
+                                    <p class="text-muted" id="emp_pool_options">NA</p>
+                                </div>
+
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Extra Options</strong> <br>
+                                    <p class="text-muted" id="emp_extra_options">NA</p>
+                                </div>
+
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Vested Options</strong> <br>
+                                    <p class="text-muted" id="emp_vested_options">NA</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div id="no_secure_area" class="white-box" style="display: none;">
+                <h3>Please Login Into Meta-mask To Access This Area.</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+</div>
+<footer class="main-footer text-center">    
+    <img src="images/image-object.png" style="width: 100%;">
+    <div class="bottom-nav-top">
+        <div class="container">
+            <div class="footer-top">
+                <ul class="footer-menu text-center">
+                    <li class="footer-menu-item"><a href="#">Imprint</a></li>
+                    <li class="footer-menu-item"><a href="#">Privacy Policy</a></li>
+                    <li class="footer-menu-item"><a href="#">Code of Conduct</a></li>
+                    <li class="footer-menu-item"><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav-bottom">
+            <div class="container">
+                <div class="footer-bottom">
+                    <div id="footer-info" class="footer-text">© 2016 - 2019 UnitedCrowd</div>
+                </div>
+            </div>
+        </div>
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

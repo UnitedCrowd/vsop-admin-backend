@@ -1,0 +1,297 @@
+﻿<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>UnitedCrowd - ESOP</title>
+        <link rel="stylesheet" href="../css/style_new.css" />
+    </head>
+    <body>
+<style>
+.logo_size{
+width: 290px;
+}
+</style>
+        <header class="">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#"><img src="../images/UC-Logo_new.png" class="logo_size" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse navbar-collapse-right  " id="navbarSupportedContent">
+                        <ul id="left_menus" class="navbar-nav mr-auto">
+
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html" tabindex="-1" aria-disabled="true">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="grant_vested_token.html" tabindex="-1" aria-disabled="true">Grant Vested Token</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="revoke_vesting.html" tabindex="-1" aria-disabled="true">Revoke Vesting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="grant_bonus_tokens.html" tabindex="-1" aria-disabled="true">Grant Bonus Token</a>
+                            </li>
+                           
+
+                        </ul>
+                        <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                        <a class="nav-link" href="get_all_details.html" tabindex="-1" aria-disabled="true">ESOP Overview</a>
+                    </li>
+                    </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="form-area">
+            <div class="container">
+
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div  class="white-box">
+                            <h3 class="box-title m-b-0">Employee Option Grants Status</h3>
+                            <div class="row">
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Total Pool Option</strong> <br>
+                                    <p class="text-muted" id="total_pool_option"></p>
+                                </div>
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Employees in ESOP</strong> <br>
+                                    <p class="text-muted" id="emp_in_esop"></p>
+                                </div>
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Remaining Pool Options</strong> <br>
+                                    <p class="text-muted" id="remain_pool_options"></p>
+                                </div>
+                                <div class="col-md-3 col-xs-6"> <strong>Extra Option Issued</strong> <br>
+                                    <p class="text-muted" id="extra_option_issued"></p>
+                                </div>
+
+                            </div>
+                            <br>
+                            <hr class="m-t-0">
+                            <div class="row">
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>ESOP state</strong> <br>
+                                    <p class="text-muted" id="esop_state">Open</p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="white-box">
+                            <h3 class="box-title m-b-0">Contract Addresses</h3>
+                            <div class="row">
+                                <div class="col-md-6 col-xs-6 b-r"> <strong>Root of Trust</strong> <br>
+                                    <p class="text-muted" id="root_of_trust"></p>
+                                </div>
+                                <div class="col-md-6 col-xs-6 b-r"> <strong>ESOP Contract</strong> <br>
+                                    <p class="text-muted" id="esop_contract"></p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="white-box">
+                            <h3 class="box-title m-b-0">ESOP terms and conditions</h3>
+                            <div class="row">
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Total Pool Options</strong> <br>
+                                    <p class="text-muted" id="total_pool_option_tc"></p>
+                                </div>
+                                <div class="col-md-6 col-xs-6 b-r"> <strong>New Employee Pool</strong> <br>
+                                    <p class="text-muted" id="new_employee_pool"></p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="white-box">
+                            <h3 class="box-title m-b-0">Employee List</h3>
+                            <div class="row">
+                                <div class="col-md-12 table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                        <th>Public Key</th>
+                                        <th>Issue Date</th>
+                                        <th>Issued Options</th>
+                                        <th>Vested Options</th>
+                                        <th>State</th>
+                                        </thead>
+                                        <tbody id="emp_table_body">
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="white-box">
+                            <h3 class="box-title m-b-0">Employee Details</h3>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="col-md-12">Employee Address</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" name="employee_address" id="employee_address" />
+                                        </div>
+                                    </div>
+                                    <button type="button" onclick="get_emp_details()" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-6 b-r"> <strong>Issue Date</strong> <br>
+                                            <p class="text-muted" id="emp_issue_date">NA</p>
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 b-r"> <strong>Pool Options</strong> <br>
+                                            <p class="text-muted" id="emp_pool_options">NA</p>
+                                        </div>
+
+                                        <div class="col-md-3 col-xs-6 b-r"> <strong>Extra Options</strong> <br>
+                                            <p class="text-muted" id="emp_extra_options">NA</p>
+                                        </div>
+
+                                        <div class="col-md-3 col-xs-6 b-r"> <strong>Vested Options</strong> <br>
+                                            <p class="text-muted" id="emp_vested_options">NA</p>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+                <!-- /.row -->
+            </div>
+        </div>
+        <footer class="main-footer text-center">    
+           
+            <div class="bottom-nav-top">
+                <div class="container">
+                    <div class="footer-top">
+                        <ul class="footer-menu text-center">
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.com/en/imprint/">Imprint</a></li>
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.com/en/privacy-policy/">Privacy Policy</a></li>
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.com/en/code-of-conduct/">Code of Conduct</a></li>
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.zendesk.com/hc/en-us">FAQ</a></li>
+                </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-nav-bottom">
+                <div class="container">
+                    <div class="footer-bottom">
+                        <div id="footer-info" class="footer-text">© 2016 - 2019 UnitedCrowd</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="../plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+        <script src="../js/toastr.js"></script>
+        <script src="../web3jsnew/web3.js"></script>
+        <script>
+                                        //web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+        </script>
+        <script src="../web3jsnew/contractInstance.js"></script>
+       
+        <script>
+
+            try {
+
+            if (!web3.isConnected()) {
+                window.location.href="../index.html";
+                
+            }
+        }
+        catch(err){
+           
+            window.location.href="../index.html";
+        }
+        
+        // check network
+
+            var networkID = web3.version.network;	// change this in the future
+            var networkName = "Kovan Test Network";	// change this in the future
+            
+            if (networkID !== "42") {
+                window.location.href="../index.html";
+            }
+        </script>
+        <script src="../web3jsnew/apis.js"></script>
+        <script>
+                                        //$('#left_menus').hide();
+                                        
+                                        
+                                        
+                                        //$('#secure_area').hide();
+                                        //$('#no_secure_area').show();
+                                        // this all functions are available in apis.js
+                                        totalSupply();
+                                        getTotalEmployees();
+                                        getAvlblTokens();
+                                        getTotalBonusIssued();
+                                        getRootAddress();
+                                        getContractAddress();
+                                        getRemPercentage();
+
+                                        var employee_addr_list = ['0xE80549DE5aAaDFceb44CCc56960937D511798270'];
+                                        var i = 0;
+                                        for (i = 0; i < employee_addr_list.length; i++) {
+                                            var emp_addr = employee_addr_list[i];
+                                            var result = getEmployeeSpecs(employee_addr_list[i], function (result, vestedAmt) {
+                                                var issued_options = result[4] + result[5];
+                                                if (result[7]) {
+                                                    var state = "Terminated";
+                                                } else {
+                                                    var state = "Employed";
+                                                }
+                                                $('#emp_table_body').append('<tr>\n\
+                        <td>' + emp_addr + '</td>\n\
+                        <td>' + convert(String(result[0])) + '</td>\n\
+                        <td>' + issued_options / Math.pow(10, 18) + '</td>\n\
+                        <td>' + vestedAmt / Math.pow(10, 18) + '</td>\n\
+                        <td>' + state + '</td>\n\
+                        </tr>');
+                                            });
+
+                                        }
+                                        function get_emp_details() {
+                                            getEmployeeSpecs($('#employee_address').val(), function (result, vestedAmt) {
+                                                $('#emp_issue_date').text(convert(String(result[0])));
+                                                $('#emp_pool_options').text(result[4] / Math.pow(10, 18));
+                                                $('#emp_extra_options').text(result[5] / Math.pow(10, 18));
+                                                $('#emp_vested_options').text(vestedAmt / Math.pow(10, 18));
+                                            });
+                                        }
+        </script>
+
+    </body>
+</html>
+
+

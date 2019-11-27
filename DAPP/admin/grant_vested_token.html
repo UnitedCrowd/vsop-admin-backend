@@ -1,0 +1,182 @@
+﻿
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>UnitedCrowd - ESOP</title>
+<link rel="stylesheet" href="../css/style_new.css" />
+</head>
+<body>
+<style>
+.logo_size{
+width: 290px;
+}
+</style>
+<header class="">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"><img src="../images/UC-Logo_new.png" class="logo_size" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse navbar-collapse-right  " id="navbarSupportedContent">
+                <ul id="left_menus" class="navbar-nav mr-auto">
+                    
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" tabindex="-1" aria-disabled="true">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="grant_vested_token.html" tabindex="-1" aria-disabled="true">Grant Vested Token</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="revoke_vesting.html" tabindex="-1" aria-disabled="true">Revoke Vesting</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="grant_bonus_tokens.html" tabindex="-1" aria-disabled="true">Grant Bonus Token</a>
+                    </li>
+                    
+                    
+                </ul>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                        <a class="nav-link" href="get_all_details.html" tabindex="-1" aria-disabled="true">ESOP Overview</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+         </div>
+</header>
+<div class="form-area">
+    <div class="container">
+        
+        <!-- .row -->
+        <div class="row">
+            <div id="secure_area" class="white-box col-md-12">
+                            <h3 class="box-title m-b-0">Grant vested token</h3>
+
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="col-md-12"> Employee Wallet Address</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="benificiary_address" id="benificiary_address" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Fully Vested Amount</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="vested_amount" id="vested_amount" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Start Date (In Epoch, 0 indicates start "now")</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="start_date" id="start_date" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Duration of cliff (In second)</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="cliff_sec" id="cliff_sec" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Vesting Duration (In second)</label>
+                                    <div class="col-md-12">
+                                        <input type="text" name="duration_sec" id="duration_sec" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-12">Is Revocable</label>
+                                    <div class="col-md-12">
+                                        <select class="form-control" name="is_revokable" id="is_revokable">
+                                            <option value="1">Yes</option>
+                                            <option value="0">No</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <button type="button" onclick="grant_vested_token();" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                            </form>
+                        </div>
+                        
+                        <div id="no_secure_area" class="white-box">
+                            <h3>Please Login Into Meta-mask To Access This Area.</h3>
+                        </div>
+        </div>
+        <!-- /.row -->
+    </div>
+</div>
+<footer class="main-footer text-center">    
+    
+    <div class="bottom-nav-top">
+        <div class="container">
+            <div class="footer-top">
+                <ul class="footer-menu text-center">
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.com/en/imprint/">Imprint</a></li>
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.com/en/privacy-policy/">Privacy Policy</a></li>
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.com/en/code-of-conduct/">Code of Conduct</a></li>
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.zendesk.com/hc/en-us">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav-bottom">
+            <div class="container">
+                <div class="footer-bottom">
+                    <div id="footer-info" class="footer-text">© 2016 - 2019 UnitedCrowd</div>
+                </div>
+            </div>
+        </div>
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="../plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+<script src="../js/toastr.js"></script>
+    
+    <script src="../web3jsnew/web3.js"></script>
+	<script src="../web3jsnew/enableMetamask.js"></script>
+    <script src="../web3jsnew/grantVestedTokens.js"></script>
+
+    <script>
+        $('#left_menus').hide();
+        $('#secure_area').hide();
+            $('#no_secure_area').show();
+        function grant_vested_token() {
+            var benificiary = $('#benificiary_address').val();
+            var fullyVestedAmount = $('#vested_amount').val();
+            var startDate = $('#start_date').val();
+            var cliffSec = $('#cliff_sec').val();
+            var durationSec = $('#duration_sec').val();
+            var isRevokable = $('#is_revokable').val();
+
+            if (benificiary == "" || fullyVestedAmount == "" || startDate == "" || cliffSec == "" || durationSec == "" || isRevokable == "") {
+                $.toast({
+                    heading: 'Error',
+                    text: "All values needed.",
+                    position: 'top-right',
+                    loaderBg: '#ff6849',
+                    icon: 'error',
+                    hideAfter: 5000
+
+                });
+                return false;
+            }
+
+            grantVestedTokens(benificiary, fullyVestedAmount, startDate, cliffSec, durationSec, isRevokable);
+        }
+    </script>
+</body>
+</html>
+

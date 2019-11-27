@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>example</title>
+<link rel="stylesheet" href="../css/style_new.css" />
+</head>
+<body>
+<header class="">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"><img src="../images/UC-Logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            
+                <div class="collapse navbar-collapse navbar-collapse-right  " id="navbarSupportedContent">
+                <ul id="left_menus" class="navbar-nav mr-auto">
+                    
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html" tabindex="-1" aria-disabled="true">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="release_vested_token.html" tabindex="-1" aria-disabled="true">Release Vested Token</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="releasable_amount.html" tabindex="-1" aria-disabled="true">Releasable Amount</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="get_vested_amount.html" tabindex="-1" aria-disabled="true">Get Vested Amount</a>
+                    </li>
+                    
+                    
+                    
+                </ul>
+                    
+                </div>
+            </nav>
+         </div>
+</header>
+<div class="form-area">
+    <div class="container">
+        
+        <!-- .row -->
+        <div class="row">
+            <div class="col-sm-12">
+          <div class="white-box">
+            <h3 class="box-title m-b-0">Releasable Amount</h3>
+            
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label class="col-md-12">Employee Wallet Address </label>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="benificiary_address" id="benificiary_address" />
+                </div>
+              </div>
+                <button type="button" onclick="releasableamount();" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+            </form>
+          </div>
+        </div>
+        </div>
+        <!-- /.row -->
+    </div>
+</div>
+<footer class="main-footer text-center">    
+    <img src="../images/image-object.png" style="width: 100%;">
+    <div class="bottom-nav-top">
+        <div class="container">
+            <div class="footer-top">
+                <ul class="footer-menu text-center">
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.com/en/imprint/">Imprint</a></li>
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.com/en/privacy-policy/">Privacy Policy</a></li>
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.com/en/code-of-conduct/">Code of Conduct</a></li>
+                    <li class="footer-menu-item"><a href="https://unitedcrowd.zendesk.com/hc/en-us">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-nav-bottom">
+            <div class="container">
+                <div class="footer-bottom">
+                    <div id="footer-info" class="footer-text">© 2016 - 2019 UnitedCrowd</div>
+                </div>
+            </div>
+        </div>
+</footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="../plugins/bower_components/toast-master/js/jquery.toast.js"></script>
+<script src="../js/toastr.js"></script>
+    
+    <script src="../web3jsnew/web3.js"></script>
+<script src="../web3js/contractInstance.js"></script>
+<script src="../web3js/releasableAmount.js"></script>
+
+<script>
+function releasableamount() {
+            var benificiary = $('#benificiary_address').val();
+            
+
+            if (benificiary == "") {
+                $.toast({
+                    heading: 'Error',
+                    text: "All values needed.",
+                    position: 'top-right',
+                    loaderBg: '#ff6849',
+                    icon: 'error',
+                    hideAfter: 5000
+
+                });
+                return false;
+            }
+
+            releasableAmount(benificiary);
+        }
+</script>
+</body>
+</html>
+

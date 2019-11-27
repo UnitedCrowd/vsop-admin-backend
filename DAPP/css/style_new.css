@@ -1,0 +1,130 @@
+.navbar {
+  padding: 1.2rem 1rem;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+  }
+.nav-btn a {
+  display: block;
+    padding: 5px 10px!important;
+    border: 1px solid #2ea3f2!important;
+    background: none!important;
+    color: #666!important;
+    border-radius: 3px;
+}
+.navbar-right {
+  float: right;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0,0,0,.6);
+}
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+
+.form-area {
+  background-color: #edf1f5;
+  padding-top: 25px;
+  min-height: 300px;
+}
+.bg-title {
+  background: #ffffff;
+  overflow: hidden;
+  padding: 15px 15px 10px;
+  margin: auto;
+  margin-bottom: 25px;
+}
+.white-box .box-title {
+  margin: 0 0 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+.white-box {
+  background: #ffffff;
+  padding: 25px;
+  margin-bottom: 15px;
+}
+b, strong {
+  font-weight: 700;
+}
+.b-r {
+  border-right: 1px solid rgba(120,130,140,0.13);
+}
+.waves-effect {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.btn-success, .btn-success.disabled {
+  background: #00c292;
+  border: 1px solid #00c292;
+}
+.m-r-10 {
+  margin-right: 10px !important;
+}
+
+.main-footer {
+  background-color: #edf1f5;
+}
+.bottom-nav-top {
+  background-color: #2d2d2d;
+}
+.footer-menu {
+  list-style: none;
+  padding: 15px 0;
+  margin-bottom: auto;
+}
+.footer-menu li {
+  display: inline-block;
+  padding-right: 22px;
+  font-size: 14px;
+  font-weight: 600;
+}
+.footer-menu a {
+  color: #bbb;
+  transition: all .4s ease-in-out;
+}
+.footer-menu a:hover {
+  opacity: .7;
+  text-decoration: none;
+}
+.bottom-nav-bottom {
+  background-color: #171717;
+  padding: 15px 0 5px;
+}
+.footer-text {
+  float: none!important;
+  text-align: center!important;
+  padding-bottom: 10px;
+  color: #666;
+}
+
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: 1.3rem;
+      padding-left: .5rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .col-md-6 {
+      max-width: 100%;
+  }
+}
+.logo_size{
+width: 290px;
+}
